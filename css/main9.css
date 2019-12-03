@@ -1,0 +1,1774 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'SegoeUI', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+  h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0; }
+
+    ul li {
+      list-style-type: none; }
+
+      a {
+        text-decoration: none; }
+
+        img {
+          width: 100%;
+          height: auto; }
+
+          button:focus {
+            outline: none; }
+
+            input:focus {
+              outline: none; }
+
+
+              @font-face {
+                font-family: "SegoeUI";
+                src: url("../fonts/SegoeUI.woff") format("woff"), url("../fonts/SegoeUI.woff2") format("woff2");
+                /*  font-weight: 900;*/
+                font-style: normal; }
+
+                @font-face {
+                  font-family: "SegoeUI-Bold";
+                  src: url("../fonts/SegoeUI-Bold.woff") format("woff"), url("../fonts/SegoeUI-Bold.woff2") format("woff2");
+                  /*  font-weight: 700;*/
+                  font-style: normal; }
+
+
+
+                  @font-face {
+                    font-family: "fontawesome-webfont";
+                    src: url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.woff2") format("woff2"); }
+
+
+                    .fa-angle-right {
+                     /* margin-left: 10px;*/
+                     font-size: 17px;
+                     position: absolute;
+                     right: 25px;  
+                   }
+
+                   .fa-dollar-sign {
+                    font-size: 15px;
+                    position: absolute;
+
+                  }
+
+@media (min-width: 1200px) {
+  .hero {
+    min-height: 770px!important;
+  }
+    .container {
+      max-width: 1352px;
+  }
+  }
+  .hero-title {
+    font-size: 64px!important;
+    max-width: 981px!important;
+  }
+  .menu-link {
+    font-size: 18px!important;
+  }
+}
+
+.flat-big {
+      position: fixed;
+     max-width: 113%; 
+    transform: translate(-50%,-50%);
+    top: 43%;
+    left: 50%;
+    width: 100%!important;
+    padding: 0 30px;
+    z-index: 1;
+}
+                  .button {
+                    width: 245px;
+                    background-color: #24bdd2;
+                    color: #fff;
+                    padding: 13px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    margin: auto;
+                    transition: .3s;
+                    position: relative;
+
+                  }
+
+                  .button:hover {
+                    background-color: #33cce1;
+                    cursor: pointer;
+
+
+                  }
+
+                  .button:hover .fa-angle-right {
+                    /*  margin-left: 17px;*/
+                    right: 20px;  
+                    transition: .3s;
+                  }
+
+                  .title-section {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color:#0a1b40;
+                    padding: 0 15px;
+                    font-family: 'SegoeUI-Bold', sans-serif;
+                    text-align: center;
+
+                  }
+
+                  /*-------top-line----------*/
+                  .top-line {
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+/*  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;*/
+  background: #fff;
+  z-index: 100;
+}
+
+.top-line .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.menu-link {
+  font-size: 16px!important;
+  color: #0a1b40;
+  display: inline-block;
+  transition: .3s;
+  margin-left: 60px;
+  font-weight: bold;
+  
+}
+.menu-link:first-child {
+  margin-left: 0;
+}
+
+.menu-link:hover {
+  color: #33cce1;
+  cursor: pointer;
+  text-decoration: none;
+  
+  
+}
+
+/*.menu-button {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #00b4db;
+  padding: 8px;
+  margin-left: 30px;
+  border: 1px solid #00b4db;
+  border-radius: 3px;
+  transition: .3s;
+  background: transparent;
+  cursor: pointer;
+  }*/
+
+/*.menu-button:hover {
+  color: #fff;
+  background-color: #00b4db;
+
+  }*/
+  #but-menu {
+    display: none;
+
+  }
+  .hamburger {
+    position: absolute;
+    right: 10px;
+    z-index: 10000;
+  }
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before, .hamburger.is-active .hamburger-inner:before , .hamburger.is-active .hamburger-inner:after {
+    background-color: #00b4db;
+  }
+
+  .menu-wrap {
+    background: rgba(25,27,29,0.95);
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+
+  }
+  /*-------top-line end----------*/
+
+
+  /*-------hero----------*/
+.hero-item-in {
+  justify-content: space-between;
+  max-width: 342px;
+  width: 100%;
+}
+  .hero {
+   /* min-height: 676px;*/
+    min-height: 762px;
+    background-image: url(../images/bg.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+/*z-index: -1;*/
+  }
+
+  .hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    color:#98ecff;
+    text-align: center;
+    font-family: 'SegoeUI', sans-serif;
+    max-width: 687px;
+    margin: 0 auto;
+    padding: 163px 20px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    color:#fff;
+    text-align: center;
+    padding: 10px 20px 45px;
+  }
+
+  .hero-block {
+    margin: -140px auto;
+    background-color: #fff;
+    max-width: 790px;
+    width: 100%;
+   /* margin: auto;*/
+    border-radius: 5px;
+   position: absolute;
+    transform: translate(-50%,-50%);
+    top: 114%;
+    left: 50%;
+    box-shadow: 0px 4px 10px rgba(10,27,64,0.2);
+  }
+
+  .hero-item-block {
+    padding: 25px 25px 40px;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+
+  }
+
+ @media (max-width: 832px) {
+  .hero-item {
+    flex-direction: column;
+    max-width: 160px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .hero-block {
+    max-width: 400px;
+    width: 100%;
+    top:108%;
+  }
+   .hero-item-block {
+    flex-direction: column;
+   }
+  }
+/* @media (max-width: 768px) {*/
+ @media (max-width: 832px) {
+  .hero-title {
+font-size: 41px!important;
+    padding-top: 20%;
+  }
+ }
+
+  @media (max-width: 445px) {
+  .hero-block {
+    max-width: 290px;
+  }
+   .hero-title {
+font-size: 28px!important;
+    
+  }
+  }
+
+@media (min-width: 832px) {
+.advantages .title-section {
+  padding-top: 10px!important;
+}
+}
+
+  .hero-item-img {
+    padding-right: 10px;
+  }
+
+  .hero-item {
+    font-size: 14px;
+    color:#0a1b40;
+    align-items: center;
+  }
+
+  .hero-block .title-section {
+    padding-top: 33px;
+  }
+
+  /*-------hero end----------*/
+
+
+  /*--------advantages---------*/
+  .advantages {
+    margin-bottom: 35px;
+    margin-top: 110px;
+  }
+
+  .advantages .container {
+    justify-content: space-between;
+    flex-wrap:wrap;
+  }
+
+  .advantages-item {
+    width: 255px;
+    margin: 22px auto;
+  }
+
+  .advantages .title-section {
+    padding: 65px 15px 20px;
+  }
+
+  .advantages-item:nth-child(1) {
+    background-image: url(../images/adv1.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+  }
+
+  .advantages-item:nth-child(2) {
+    background-image: url(../images/adv2.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+
+  }
+
+  .advantages-item:nth-child(3) {
+    background-image: url(../images/adv3.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+  }
+
+  .advantages-item:nth-child(4) {
+    background-image: url(../images/adv4.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+  }
+
+  .advantages-title {
+    font-size: 22px;
+    color:#0a1b40;
+    text-align: center;
+    padding: 40px 0 15px;
+  }
+
+  .advantages-text {
+    width: 187px;
+    margin: auto;
+    
+    font-size: 15px;
+    text-align: center;
+    color:#0a1b40;
+  }
+
+  /*-------advantages end----------*/
+
+
+  /*-------video----------*/
+  video {
+    width: 100%;
+  }
+
+  .video-wrap {
+    max-width: 540px;
+    margin: 20px auto 60px;
+    width: 100%;
+  }
+
+
+  /*-------video end----------*/
+
+
+  /*-------apartaments----------*/
+  .apartaments .container {
+    justify-content: space-between;
+    /* flex-wrap:wrap;*/
+  }
+
+  .apartaments .title-section {
+    padding-bottom: 30px;
+  }
+
+  .apartaments-title {
+    font-size: 20px;
+    color:#0a1b40;
+    padding: 30px 0 15px;
+  }
+
+  .apartaments-item  {
+    max-width: 365px;
+    width: 100%;
+    margin:10px auto;
+    
+  }
+
+  .apartaments-item ul li{
+    font-size: 15px;
+    color:#0a1b40;
+    padding-left: 20px;
+    background-image: url(../images/check.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .apartaments-item ul {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .apartaments .container {
+      flex-direction: column;
+    }
+    .apartaments-title {
+      padding-top: 10px;
+    }
+  }
+
+  /*-------apartaments end----------*/
+
+
+  /*-------offer----------*/
+  .offer {
+    margin-bottom: 65px;
+  }
+  .offer-block {
+    max-width: 730px;
+    width: 100%;
+    margin: auto;
+    border: 7px solid #ff6a6a;
+    padding: 22px 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .offer-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#ff6a6a;
+    font-weight: bold;
+
+  }
+
+  .offer-text {
+    font-size: 20px;
+    color:#0a1b40;
+    padding-right: 25px;
+    line-height: 20px;
+  }
+  .offer-subblock {
+    align-items: center;
+    
+  }
+
+  @media (max-width: 768px) {
+    .offer-block {
+      flex-direction: column;
+      padding: 22px 10px;
+    }
+    .offer-subblock {
+
+      padding-top: 20px;
+    }
+
+  }
+  /*-------offer end----------*/
+
+
+
+  /*-------quarters----------*/
+  .quarters-link:hover {
+    text-decoration: none;
+    
+  }
+  .quarters  {
+    padding-bottom: 30px;
+  }
+  .quarters .title-section {
+    padding-bottom: 30px; 
+  } 
+
+  .quarters-block {
+    justify-content: center; 
+    flex-wrap: wrap;
+   
+    
+  }
+   .quarters .container {
+    position: relative;
+    
+  }
+
+  .quarters-item {
+
+    background: #fff;
+    margin: 12px; 
+    padding: 15px 20px;
+    width: 345px;
+    box-shadow: 0px 3px 10px rgba(10, 27, 64, 0.2), 0px 0px 3px rgba(10, 27, 64, 0.2);
+  }
+
+  .quarters-item-title {
+    font-size: 14px;
+    color:#0a1b40;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: 1200px) and (min-width: 768px) {
+   .quarters-item {
+    width: 218px;
+  }
+
+  .quarters .button, .profit .button {
+    width: 145px;
+    font-size: 12px;
+  }
+
+  .quarters .button .fa-angle-right, .profit .button .fa-angle-right{
+    right: 18px;
+  }
+
+  .quarters .button:hover .fa-angle-right , .profit .button:hover .fa-angle-right{
+    right: 9px;
+  }
+
+  .profit .container {
+    max-width: 700px;
+  }
+
+ 
+
+
+}
+
+
+@media (min-width: 1200px) {
+  .profit .button {
+    margin-left: 218px!important;
+  }
+
+}
+
+/*-------quarters end----------*/
+
+
+/*-------profit----------*/
+.profit {
+  background-image: url(../images/bg-profit.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.profit-title {
+  font-size: 30px;
+  color:#fff;
+  padding: 38px 0 50px;
+  text-align: center;
+  
+}
+
+@media (max-width: 1200px) {
+ .profit-title {
+  font-size: 23px!important;
+}
+
+}
+@media (max-width: 768px) {
+ .profit .container {
+  flex-direction: column;
+}
+.profit-title {
+  padding: 25px 0;
+}
+
+.profit .button {
+  margin-bottom: 25px;
+}
+
+}
+
+/*-------profit end----------*/
+
+/*--------footer---------*/
+.footer {
+  background: #eef9ff;
+  /* text-align: center;*/
+  font-size: 12px;
+  color: #0a1b40;
+  margin-bottom: 56px;
+}
+
+/*.success {
+  background: 
+}*/
+.success .footer {
+  background: transparent;
+}
+.success-title {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: #0a1b40;
+}
+.success-subtitle {
+  font-size: 29px;
+  text-align: center;
+color: #0a1b40;
+}
+.footer .container, .success .footer .container {
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+/*.success .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}*/
+ /* .footer p, .footer-policy-link, .footer-phone {
+    opacity: 0.7;
+    }*/
+    .footer__policy-link {
+      color:  #0a1b40;
+      text-decoration: underline; 
+      transition: .3s;
+      /* display: block; */
+      cursor: pointer;
+      /* max-width: 250px;*/
+      /*  margin: 0 auto;*/
+    }
+    .footer__policy-link:hover, .footer-phone:hover {
+      text-decoration: none;  
+      color:  #0a1b40;
+    }
+
+    .footer-phone {
+      color:  #0a1b40;
+    }
+
+    @media (max-width: 768px) {
+     .footer .container {
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+    .footer-policy {
+      order:1;
+    }
+    .footer-copy {
+      order:-1;
+    }
+
+    .footer-security {
+      padding: 10px;
+    }
+
+
+
+
+  }
+
+  /*-------footer end----------*/
+
+  /*-------------------form---------------------*/
+
+  .form-popup {
+    background: rgba(227, 229, 232, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    position: fixed;
+    overflow-y: auto;
+    display: none; 
+    padding: 20px;
+    z-index: 100000;
+  }
+  .form-popup__wrap {
+    max-width: 420px;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 5%;
+    padding: 60px 50px 25px; 
+    border-radius: 5px;
+  }
+
+  .form-popup__title {
+    font-size: 24px;
+    color: #0a1b40;
+    padding-bottom: 25px;
+    text-align: center;
+    
+  }
+
+  .form-popup__title span {
+    font-size: 30px;
+    color: #00b4db;
+    font-weight: 700;
+    padding: 10px 0 15px;
+    display: inline-block;
+  }
+
+  .form-garant {
+    font-size: 13px;
+    color: #424559;
+    margin-top: 40px;
+    padding-left: 30px;
+    background-image: url('../images/lock.png');
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+  }
+
+  .form-popup__form-block {
+    max-width: 332px;
+
+  }
+
+  .close-link-form {
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    font-size: 30px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+
+  .phone-wrap {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+
+ .form-button {
+  max-width: 410px;
+    width: 100%;
+    padding-left: 9%!important;
+    font-size: 23px;
+    
+    
+ }
+
+   @media (max-width:480px )  {
+.form-button {
+ 
+    font-size: 17px;
+    
+    
+ }
+   }
+
+ /*.form-button .fa-arrow-right {
+  margin-left: 25px;
+ }*/
+
+ /*.form-button:hover .form-button .fa-arrow-right {
+  margin-right: 28px;
+ }*/
+
+  .form-field {
+    max-width: 100%;
+    width: 100%;
+    max-width: 410px;
+    padding: 12px ;
+  /*  font-size: 14px;*/
+    line-height: 33px;
+    color: #0b202e;
+ 
+    border: 1px solid #a7a7a7;
+    background-color: rgba(51, 51, 51, 0.06);
+    border-bottom: 2px solid #a7a7a7;
+    margin-bottom: 20px; }
+
+    .codePhone {
+      width: 40px;
+
+    }
+
+    #phone {
+      width: 100%;
+      margin-left: 5px;
+      padding-right: 0;
+    }
+
+    .selected-dial-code {
+      font-size: 16px;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+
+    .name, .phone , .email {
+      position: relative;
+
+    }
+
+    /*-------------------form end---------------------*/
+
+
+    /*-------------------consultation---------------------*/
+
+    .consultation {
+      background-color: #24bdd2;
+      padding: 2px 0;
+      position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+    .consultation-title {
+      font-size: 24px;
+      color:#fff;
+      padding-left: 55px;
+      background-image: url(../images/cons.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      line-height: 52px;
+    }
+
+    .button-consultation {
+      border: 1px solid #fff;
+      padding: 7px;
+      width: 230px;
+    }
+
+      @media (max-width:992px )  {
+      .consultation-title {
+          max-width: 600px;
+          margin: auto;
+        }
+     .consultation .container {
+      flex-direction: column;
+     }
+     .footer {
+      margin-bottom: 96px;
+     }
+    }
+
+    @media (max-width:768px )  {
+      .consultation-title {
+    max-width: 320px;
+    margin: auto;
+    line-height: 25px;
+    padding-bottom: 5px;
+    font-size: 19px;
+}
+/*.button-consultation {
+  margin-top: 20px;
+}*/
+.footer {
+  margin-bottom: 99px;
+}
+
+    }
+    /*-------------------consultation end---------------------*/
+
+
+    /*-------------------success---------------------*/
+.success-wrap {
+  height: 100%;
+  background-image: url(../images/thankyou.png);
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  
+}
+
+.success {
+  height: 100%;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.success .footer {
+  margin-bottom: 0;
+}
+
+.success-text {
+  padding: 10% 20px;
+}
+
+.success-img {
+  width: 52px;
+  margin: 0 auto 20px;
+  
+}
+
+    /*-------------------success end---------------------*/
+
+
+
+    .policy {
+      background: rgba(25, 27, 29, 0.8);
+      width: 100%;
+      height: 100%;
+      z-index: 10000;
+      top: 0;
+      position: fixed;
+      overflow-y: auto;
+      padding: 0 20px;
+      display: none;
+      font-family: 'SegoeUI'; }
+      .policy-in {
+        max-width: 600px;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        margin: 0 auto; }
+        .policy-header {
+          background-color: #0a1b40;
+          color: #fff;
+          padding: 20px;
+          position: relative; }
+          .policy-header p {
+            font-size: 18px;
+            padding-top: 12px; }
+            .policy-title {
+              font-size: 21px; }
+              .policy-content {
+                background-color: #fff;
+                padding: 20px; }
+                .policy-text {
+                  font-size: 14px;
+                  margin-bottom: 25px; }
+                  .policy-content-title {
+                    font-size: 29px;
+                    font-weight: bold;
+
+                    font-family: 'SegoeUI'; }
+                    @media (max-width: 360px) {
+                      .policy-content-title {
+                        font-size: 25px; } }
+                        .policy-content-subtitle {
+                          font-size: 22px;
+                          font-weight: bold;
+
+                          font-family: 'SegoeUI';
+                          margin: 30px 0; }
+                          @media (max-width: 360px) {
+                            .policy-content-subtitle {
+                              font-size: 19px; } }
+                              .policy-list li {
+                                list-style-type: circle; }
+                                .policy-close {
+                                  background-color: #0a1b40;
+                                  font-size: 16px;
+                                  border: none;
+                                  border-radius: 3px;
+                                  color: #fff;
+                                  padding: 8px;
+                                  display: block;
+                                  width: 170px;
+                                  cursor: pointer;
+                                  transition: .3s; }
+                                  .policy-close:hover {
+                                    background-color: #1d1374; }
+
+                                    .close-link-policy {
+                                      position: absolute;
+                                      top: 5px;
+                                      right: 15px;
+                                      font-size: 20px;
+                                      display: inline-block;
+                                      color: #fff;
+                                      transition: .3s; }
+                                      .close-link-policy:hover {
+                                        text-decoration: none;
+                                        color: #312f2f; }
+
+                                        .phone {
+                                          display: -webkit-flex;
+                                          display: -moz-flex;
+                                          display: -ms-flex;
+                                          display: -o-flex;
+                                          display: flex; }
+
+                                          .phone-wrap {
+                                            display: -webkit-flex;
+                                            display: -moz-flex;
+                                            display: -ms-flex;
+                                            display: -o-flex;
+                                            display: flex; }
+
+                                            .codePhone {
+                                              z-index: -2!important;
+                                              width: 25% !important;
+                                              border: none;
+
+                                              background-color: transparent;
+                                              text-align: center;
+                                              padding-left: 0 !important;
+                                              padding-right: 0 !important; }
+                                              @media (max-width: 992px) {
+                                                .codePhone {
+                                                  padding: 2px 0 2px 20px; } }
+
+                                                  #email {
+                                                    max-width: 100%;
+                                                  }
+
+                                                  #phone {
+                                                    margin-left: 5px; }
+
+                                                    .phoneConfirm {
+                                                      max-width: 100% !important;
+                                                      margin-left: 5px; }
+
+                                                      .popup-form {
+                                                        max-width: 700px;
+                                                        margin: 0 auto 35px; }
+
+                                                        label.error {
+                                                          font-size: 11px;
+                                                          color: red;
+                                                          position: absolute;
+                                                          width: 100%;
+                                                          bottom: 0;
+                                                          left: 0; }
+
+                                                          .form-field.error {
+                                                            border-bottom-color: red; }
+
+                                                            .form-field.valid {
+                                                              border-bottom-color: #2e5c8a; }
+
+
+                                                              @media (max-width: 992px) {
+                                                                .form-field {
+                                                                  padding: 2px 20px; } }
+                                                                  @media (max-width: 768px) {
+                                                                    .form-field {
+                                                                      max-width: 100%; } }
+
+                                                                     /* .form-button {
+                                                                        padding: 17px 29px 16px 26px;
+                                                                        background-color: transparent;
+                                                                       
+                                                                        border-radius: 30px;
+                                                                        color: #2e5c8a;
+                                                                        border-color: #2e5c8a;
+                                                                        border: none;
+                                                                        text-transform: uppercase;
+                                                                        font-family: 'MontserratBold';
+                                                                        transition: .3s;
+                                                                       
+                                                                        border: 2px solid #2e5c8a;
+                                                                      }
+                                                                      .form-button:hover {
+                                                                        background: #2e5c8a;
+                                                                        color:#fff;
+                                                                        box-shadow: 0px 2px 3px rgba(244, 234, 3, 0.3); }*/
+                                                                        @media (max-width: 365px) {
+                                                                          .form-button {
+                                                                            padding: 17px 5px 16px 9px; } }
+
+                                                                            .form-footer {
+                                                                              background-color: rgba(51, 51, 51, 0.06);
+                                                                              padding: 15px 0; }
+                                                                              .form-footer .tasks-field-container {
+                                                                                display: flex;
+                                                                                justify-content: space-between;
+                                                                                align-items: center; }
+                                                                                @media (max-width: 585px) {
+                                                                                  .form-footer .tasks-field-container {
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center; } }
+
+                                                                                    .form-footer-text {
+                                                                                      font-family: 'RalewayRegular';
+                                                                                      font-size: 12px;
+                                                                                      line-height: 14px;
+                                                                                      padding: 10px 0px 10px 48px;
+                                                                                      color: #8b8b8b;
+                                                                                      text-align: left;
+                                                                                      background-repeat: no-repeat; }
+                                                                                      .form-footer-text:first-child {
+                                                                                        background-image: url("../images/mob.png");
+                                                                                        background-position: 0 10px; }
+                                                                                        .form-footer-text:last-child {
+                                                                                          background-image: url("../images/lock.png");
+                                                                                          padding-left: 45px;
+                                                                                          background-position: 8px 7px; }
+                                                                                          @media (max-width: 585px) {
+                                                                                            .form-footer-text {
+                                                                                              width: 270px;
+                                                                                              margin: auto; } }
+
+                                                                                              .popup-ver {
+                                                                                                position: fixed;
+                                                                                                left: 0;
+                                                                                                top: 0;
+                                                                                                right: 0;
+                                                                                                bottom: 0;
+                                                                                                z-index: 9999999999;
+                                                                                                display: none;
+                                                                                                height: 100%;
+                                                                                                background-color: rgba(0, 0, 0, 0.6);
+                                                                                                padding: 0 20px; }
+                                                                                                .popup-ver-in {
+                                                                                                  display: block;
+                                                                                                  max-width: 600px;
+                                                                                                  width: 100%;
+                                                                                                  margin: 100px auto;
+                                                                                                  background-color: #fff;
+                                                                                                  box-shadow: 0 2px 30px -4px #000;
+                                                                                                  text-align: center;
+                                                                                                  border-radius: 5px;
+                                                                                                  position: relative; }
+                                                                                                  .popup-ver-header {
+                                                                                                    background-color: #000;
+                                                                                                    color: #fff;
+                                                                                                    padding: 20px 15px;
+                                                                                                    text-align: left;
+                                                                                                    font-size: 16px;
+                                                                                                    border-radius: 5px 5px 0 0; }
+                                                                                                    .popup-ver .popup-wrap-but {
+                                                                                                      display: flex;
+                                                                                                      justify-content: space-between;
+                                                                                                      flex-wrap: wrap; }
+                                                                                                      .popup-ver-ver-cont {
+                                                                                                        padding: 20px 15px; }
+                                                                                                        .popup-ver .popup-container {
+                                                                                                          max-width: 600px;
+                                                                                                          width: 100%;
+                                                                                                          margin: 0 auto;
+                                                                                                          padding: 20px 20px 0px; }
+                                                                                                          .popup-ver button {
+                                                                                                            color: #fff;
+                                                                                                            background: none;
+                                                                                                            border: none; }
+                                                                                                            .popup-ver .popup-close {
+                                                                                                              font-size: 17px;
+                                                                                                              color: #fff;
+                                                                                                              position: absolute;
+                                                                                                              top: 5px;
+                                                                                                              right: 5px;
+                                                                                                              cursor: pointer;
+                                                                                                              transition: .3s; }
+                                                                                                              .popup-ver .popup-close:hover {
+                                                                                                                color: #968f8f; }
+                                                                                                                .popup-ver .popup-form-title {
+                                                                                                                  text-align: left;
+                                                                                                                  padding-bottom: 8px; }
+
+                                                                                                                  #sms-code {
+                                                                                                                    padding: 12px;
+                                                                                                                    width: 100%;
+                                                                                                                    margin-bottom: 25px;
+                                                                                                                    border-radius: 5px;
+                                                                                                                    border: 1px solid #a7a7a7; }
+
+                                                                                                                    #res {
+                                                                                                                      padding: 14px 29px 13px 26px;
+                                                                                                                      background-color: #03A9F4;
+                                                                                                                      box-shadow: 0px 4px 10px rgba(3, 169, 244, 0.5);
+                                                                                                                      border-radius: 5px;
+                                                                                                                      text-transform: uppercase;
+                                                                                                                      font-weight: bold;
+                                                                                                                      transition: .3s;
+                                                                                                                      margin-bottom: 20px; }
+                                                                                                                      @media (max-width: 500px) {
+                                                                                                                        #res {
+                                                                                                                          width: 100%; } }
+                                                                                                                          #res:hover {
+                                                                                                                            background: #0989c3;
+                                                                                                                            box-shadow: 0px 2px 3px rgba(3, 169, 244, 0.3); }
+
+                                                                                                                            #submit-number {
+                                                                                                                              padding: 9px 20px;
+                                                                                                                              background-color: #03A9F4;
+                                                                                                                              box-shadow: 0px 4px 10px rgba(3, 169, 244, 0.5);
+                                                                                                                              border-radius: 5px;
+                                                                                                                              text-transform: uppercase;
+                                                                                                                              font-weight: bold;
+                                                                                                                              transition: .3s;
+                                                                                                                              margin-bottom: 20px; }
+                                                                                                                              #submit-number:hover {
+                                                                                                                                background: #0989c3;
+                                                                                                                                box-shadow: 0px 2px 3px rgba(3, 169, 244, 0.3); }
+
+                                                                                                                                #change-number {
+                                                                                                                                  padding: 14px 29px 13px 26px;
+                                                                                                                                  background-color: #a7a7a7;
+                                                                                                                                  box-shadow: 0px 4px 10px rgba(136, 140, 142, 0.5);
+                                                                                                                                  border-radius: 5px;
+                                                                                                                                  text-transform: uppercase;
+                                                                                                                                  font-weight: bold;
+                                                                                                                                  transition: .3s;
+                                                                                                                                  margin-bottom: 20px; }
+                                                                                                                                  @media (max-width: 500px) {
+                                                                                                                                    #change-number {
+                                                                                                                                      width: 100%; } }
+                                                                                                                                      #change-number:hover {
+                                                                                                                                        background: #8c9295;
+                                                                                                                                        box-shadow: 0px 2px 3px rgba(136, 140, 142, 0.3); }
+
+                                                                                                                                        #currPhone {
+                                                                                                                                          color: #03a9f4;
+                                                                                                                                          font-weight: bold;
+                                                                                                                                          font-size: 16px; }
+
+                                                                                                                                          #codeError, #errorLead {
+                                                                                                                                            color: red;
+                                                                                                                                            display: none!important;
+                                                                                                                                            font-size: 11px;
+                                                                                                                                            bottom: 74px;
+                                                                                                                                            left: 0;
+                                                                                                                                            position: absolute; }
+                                                                                                                                            @media (max-width: 500px) {
+                                                                                                                                              #codeError, #errorLead {
+                                                                                                                                                bottom: 139px; } }
+
+                                                                                                                                                .popup-form {
+                                                                                                                                                  position: relative; }
+
+                                                                                                                                                  .phoneConfirmWrap {
+                                                                                                                                                    display: none; }
+                                                                                                                                                    .phoneConfirmWrap span {
+                                                                                                                                                      display: block;
+                                                                                                                                                      text-align: left;
+                                                                                                                                                      padding-bottom: 10px; }
+
+
+
+
+
+                                                                                                                                                      #widget-meter {
+                                                                                                                                                        width: 300px;
+                                                                                                                                                        margin: 0 auto;
+                                                                                                                                                      }
+                                                                                                                                                      #widget-meter .needle,
+                                                                                                                                                      #widget-meter .needle-center {
+                                                                                                                                                        fill: gray;
+                                                                                                                                                      }
+
+                                                                                                                                                      /*-------hamburger---------------*/
+                                                                                                                                                      .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+                                                                                                                                                        background-color: #f8f1f1!important;
+                                                                                                                                                      }
+                                                                                                                                                      /*-------hamburger-end---------------*/
+
+
+                                                                                                                                                      /*-------preloader---------------*/
+
+                                                                                                                                                      #preloader {
+                                                                                                                                                        background: rgba(15, 82, 35, 0.8);
+                                                                                                                                                        width: 100%;
+                                                                                                                                                        height: 100%;
+                                                                                                                                                        position: fixed;
+                                                                                                                                                        z-index: 10000;
+                                                                                                                                                        top: 0;
+                                                                                                                                                        display: none;
+
+                                                                                                                                                      }
+
+
+                                                                                                                                                      #floatingCirclesG{
+                                                                                                                                                        position:relative;
+                                                                                                                                                        width:125px;
+                                                                                                                                                        height:125px;
+                                                                                                                                                        margin:auto;
+                                                                                                                                                        transform:scale(0.6);
+                                                                                                                                                        -o-transform:scale(0.6);
+                                                                                                                                                        -ms-transform:scale(0.6);
+                                                                                                                                                        -webkit-transform:scale(0.6);
+                                                                                                                                                        -moz-transform:scale(0.6);
+                                                                                                                                                        position: fixed;
+                                                                                                                                                        z-index: 1000;  
+                                                                                                                                                        transform: translate(-50%,-50%);
+                                                                                                                                                        top: 50%;   
+                                                                                                                                                        left: 50%;  
+                                                                                                                                                      }
+
+                                                                                                                                                      .f_circleG{
+                                                                                                                                                        position:absolute;
+                                                                                                                                                        background-color:rgb(255,255,255);
+                                                                                                                                                        height:22px;
+                                                                                                                                                        width:22px;
+                                                                                                                                                        border-radius:12px;
+                                                                                                                                                        -o-border-radius:12px;
+                                                                                                                                                        -ms-border-radius:12px;
+                                                                                                                                                        -webkit-border-radius:12px;
+                                                                                                                                                        -moz-border-radius:12px;
+                                                                                                                                                        animation-name:f_fadeG;
+                                                                                                                                                        -o-animation-name:f_fadeG;
+                                                                                                                                                        -ms-animation-name:f_fadeG;
+                                                                                                                                                        -webkit-animation-name:f_fadeG;
+                                                                                                                                                        -moz-animation-name:f_fadeG;
+                                                                                                                                                        animation-duration:1.2s;
+                                                                                                                                                        -o-animation-duration:1.2s;
+                                                                                                                                                        -ms-animation-duration:1.2s;
+                                                                                                                                                        -webkit-animation-duration:1.2s;
+                                                                                                                                                        -moz-animation-duration:1.2s;
+                                                                                                                                                        animation-iteration-count:infinite;
+                                                                                                                                                        -o-animation-iteration-count:infinite;
+                                                                                                                                                        -ms-animation-iteration-count:infinite;
+                                                                                                                                                        -webkit-animation-iteration-count:infinite;
+                                                                                                                                                        -moz-animation-iteration-count:infinite;
+                                                                                                                                                        animation-direction:normal;
+                                                                                                                                                        -o-animation-direction:normal;
+                                                                                                                                                        -ms-animation-direction:normal;
+                                                                                                                                                        -webkit-animation-direction:normal;
+                                                                                                                                                        -moz-animation-direction:normal;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_01{
+                                                                                                                                                        left:0;
+                                                                                                                                                        top:51px;
+                                                                                                                                                        animation-delay:0.45s;
+                                                                                                                                                        -o-animation-delay:0.45s;
+                                                                                                                                                        -ms-animation-delay:0.45s;
+                                                                                                                                                        -webkit-animation-delay:0.45s;
+                                                                                                                                                        -moz-animation-delay:0.45s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_02{
+                                                                                                                                                        left:15px;
+                                                                                                                                                        top:15px;
+                                                                                                                                                        animation-delay:0.6s;
+                                                                                                                                                        -o-animation-delay:0.6s;
+                                                                                                                                                        -ms-animation-delay:0.6s;
+                                                                                                                                                        -webkit-animation-delay:0.6s;
+                                                                                                                                                        -moz-animation-delay:0.6s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_03{
+                                                                                                                                                        left:51px;
+                                                                                                                                                        top:0;
+                                                                                                                                                        animation-delay:0.75s;
+                                                                                                                                                        -o-animation-delay:0.75s;
+                                                                                                                                                        -ms-animation-delay:0.75s;
+                                                                                                                                                        -webkit-animation-delay:0.75s;
+                                                                                                                                                        -moz-animation-delay:0.75s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_04{
+                                                                                                                                                        right:15px;
+                                                                                                                                                        top:15px;
+                                                                                                                                                        animation-delay:0.9s;
+                                                                                                                                                        -o-animation-delay:0.9s;
+                                                                                                                                                        -ms-animation-delay:0.9s;
+                                                                                                                                                        -webkit-animation-delay:0.9s;
+                                                                                                                                                        -moz-animation-delay:0.9s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_05{
+                                                                                                                                                        right:0;
+                                                                                                                                                        top:51px;
+                                                                                                                                                        animation-delay:1.05s;
+                                                                                                                                                        -o-animation-delay:1.05s;
+                                                                                                                                                        -ms-animation-delay:1.05s;
+                                                                                                                                                        -webkit-animation-delay:1.05s;
+                                                                                                                                                        -moz-animation-delay:1.05s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_06{
+                                                                                                                                                        right:15px;
+                                                                                                                                                        bottom:15px;
+                                                                                                                                                        animation-delay:1.2s;
+                                                                                                                                                        -o-animation-delay:1.2s;
+                                                                                                                                                        -ms-animation-delay:1.2s;
+                                                                                                                                                        -webkit-animation-delay:1.2s;
+                                                                                                                                                        -moz-animation-delay:1.2s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_07{
+                                                                                                                                                        left:51px;
+                                                                                                                                                        bottom:0;
+                                                                                                                                                        animation-delay:1.35s;
+                                                                                                                                                        -o-animation-delay:1.35s;
+                                                                                                                                                        -ms-animation-delay:1.35s;
+                                                                                                                                                        -webkit-animation-delay:1.35s;
+                                                                                                                                                        -moz-animation-delay:1.35s;
+                                                                                                                                                      }
+
+                                                                                                                                                      #frotateG_08{
+                                                                                                                                                        left:15px;
+                                                                                                                                                        bottom:15px;
+                                                                                                                                                        animation-delay:1.5s;
+                                                                                                                                                        -o-animation-delay:1.5s;
+                                                                                                                                                        -ms-animation-delay:1.5s;
+                                                                                                                                                        -webkit-animation-delay:1.5s;
+                                                                                                                                                        -moz-animation-delay:1.5s;
+                                                                                                                                                      }
+
+
+
+                                                                                                                                                      @keyframes f_fadeG{
+                                                                                                                                                        0%{
+                                                                                                                                                          background-color:rgb(83, 199, 30);
+                                                                                                                                                        }
+
+                                                                                                                                                        100%{
+                                                                                                                                                          background-color:rgb(158, 249, 205);
+                                                                                                                                                        }
+                                                                                                                                                      }
+
+/* @-o-keyframes f_fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+    } */
+
+    @-ms-keyframes f_fadeG{
+      0%{
+        background-color:rgb(0,0,0);
+      }
+
+      100%{
+        background-color:rgb(255,255,255);
+      }
+    }
+
+    @-webkit-keyframes f_fadeG{
+      0%{
+        background-color:rgb(0,0,0);
+      }
+
+      100%{
+        background-color:rgb(255,255,255);
+      }
+    }
+
+    @-moz-keyframes f_fadeG{
+      0%{
+        background-color:rgb(0,0,0);
+      }
+
+      100%{
+        background-color:rgb(255,255,255);
+      }
+    }
+
+
+
+
+    @media (max-width: 1200px )  {
+      .header-img-wrap {
+        margin-right: -80px;
+        margin-top: 55px;
+
+      }
+      .header-title {
+        font-size: 31px;
+      }
+    }
+
+    @media (max-width: 1044px )  {
+      .slider-item {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .header-title {
+        font-size: 25px;
+      }
+      .header-subtitle {
+        font-size: 18px;
+        padding: 15px 0 20px;
+      }
+      .header-left-block {
+        width: 360px;
+      }
+      .clock-item {
+        font-size: 40px;
+        line-height: 30px;
+      }
+      .colon {
+        margin-top: 8px;
+        font-weight: 400;
+      }
+      .header-img-wrap {
+        width: 618px;
+        margin-top: 75px;
+        margin-right: -144px;
+      }
+      .timer-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .menu-link {
+        margin-left: 21px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 828px) {
+      .content-list {
+        margin-top: 30px; 
+      }
+
+    }
+
+    @media (min-width: 769px) {
+      .menu-wrap {
+        background: transparent;
+        height: auto;
+        width: auto;
+        display: block!important;
+        overflow-y: inherit;
+        position: inherit;
+        overflow: inherit;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      .form-popup__wrap {
+        max-width: 365px; 
+        padding: 60px 20px 25px;
+      }
+
+
+
+
+      .menu {
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .menu-link {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 0;
+      }
+      .menu-button {
+        margin-left: 0;
+      }
+      #but-menu {
+        display: block;
+      }
+
+    }
+
+
+ @media (max-width: 400px) { 
+  #phone {
+    padding-left: 3px;  
+  }
+
+  .form-popup__wrap {
+   
+    padding: 60px 10px 25px;
+}
+ }
+
+
+
+    /*-------------------------popup flat--------------*/
+
+    /* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+/* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+}
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    min-width: 320px;
+    max-width: 830px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding-bottom: 15px;
+    /*padding: 15px;*/
+    border: 1px solid #383838;
+    background: #fefefe;
+/* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+/* внешняя тень */
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 10%;
+}
+/* формируем кнопку закрытия */
+.close {
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* изображения внутри окна */
+.popup img {
+    width: 100%;
+    height: auto;
+}
+/* миниатюры слева/справа */
+.pic-left, 
+.pic-right {
+    width: 25%;
+    height: auto;
+}
+.pic-left {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+.pic-right {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+/* элементы м-медиа, фреймы */
+.popup embed, 
+.popup iframe {
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0; 
+    display:block;
+    margin: auto;
+    min-width: 320px;
+    max-width: 600px;
+    width: 100%;
+}
+.popup h2 { /* заголовок 2 */
+    margin: 0;
+    color: #008000;
+    padding: 5px 0px 10px;
+    text-align: left;
+    text-shadow: 1px 1px 3px #adadad;
+    font-weight: 500;
+    font-size: 1.4em;
+    font-family: 'Tahoma', Arial, sans-serif;
+    line-height: 1.3;
+}
+/* параграфы */
+.popup p {margin: 0; padding: 5px 0}
+
+
+
+
+
