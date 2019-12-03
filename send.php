@@ -9,5 +9,5 @@ $ctx = stream_context_create(array(
         ) 
     ) 
 ); 
-file_get_contents('https://smsc.ru/sys/send.php?login=gwu&psw=dlkUY34R&phones=' .$phone.'&mes='.$res.'-ваш код подтверждения на batumi-building.top'.'&charset=utf-8', 0, $ctx); 
+file_get_contents('https://smsc.ru/sys/send.php?login=gwu&psw=*******R&phones=' .$phone.'&mes='.$res.'-ваш код подтверждения на ************'.'&charset=utf-8', 0, $ctx); 
 ?>
